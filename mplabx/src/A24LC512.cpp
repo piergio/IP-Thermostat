@@ -18,7 +18,7 @@
 AFramework::A24LC512::A24LC512(volatile AI2CDriver * driver, const uint8 lowAddress) : m_driver(NULL){
     /*  assegno il driver dell'i2c                                              */
     m_driver = driver;
-    /*  se il driver non Ã¨ NULL e non Ã¨ aperto                                  */
+    /*  se il driver non è NULL e non è aperto                                  */
     if(m_driver && !driver->isOpen()){
         /*  lo apro a frequenza 100KHz                                          */
         driver->open(AI2CDriver::Freq100KHz);
@@ -31,7 +31,7 @@ char AFramework::A24LC512::read(const uint16 address){
     char res = 0x00;
     /*  controllo che il puntatore al driver sia valido                         */
     if(!m_driver){
-        /*  se non Ã¨ cosÃ¬ ritorno false                                         */
+        /*  se non è così ritorno false                                         */
         return false;
     }
     /*  Inizio la trasmissione                                                  */
@@ -61,7 +61,7 @@ bool AFramework::A24LC512::read(const uint16 address, AString & str){
     char res = 0x00;
     /*  controllo che il puntatore al driver sia valido                         */
     if(!m_driver){
-        /*  se non Ã¨ cosÃ¬ ritorno false                                         */
+        /*  se non è così ritorno false                                         */
         return false;
     }
     uint16 prova = address;
@@ -104,7 +104,7 @@ bool AFramework::A24LC512::read(const uint16 address, AString & str){
 bool AFramework::A24LC512::write(const uint16 address, const char data){
     /*  controllo che il puntatore al driver sia valido                         */
     if(!m_driver){
-        /*  se non Ã¨ cosÃ¬ ritorno false                                         */
+        /*  se non è così ritorno false                                         */
         return false;
     }
     /*  Inizio la trasmissione                                                  */
@@ -126,7 +126,7 @@ bool AFramework::A24LC512::write(const uint16 address, const char data){
 }
 
 bool AFramework::A24LC512::write(uint16 address, const AString & str){
-    /*  se la stringa Ã¨ vuota o il puntatore al driver non Ã¨ valido             */
+    /*  se la stringa è vuota o il puntatore al driver non è valido             */
     if(str.isEmpty() || !m_driver){
         /*  ritorno false                                                       */
         return false;

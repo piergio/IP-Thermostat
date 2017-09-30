@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/ico">
+        <file>img/Settings-52.png</file>
+        <file>img/Dew Point-64.png</file>
+        <file>img/ajax-loader.gif</file>
+        <file>img/Cancel-50.png</file>
+        <file>img/Ok-48.png</file>
+        <file>img/Key-48.png</file>
+    </qresource>
+</RCC>
